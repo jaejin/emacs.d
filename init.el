@@ -1,9 +1,9 @@
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'load-path "/Users/1001265/.emacs.d/elpa/ggtags-20150325.2025")
-(add-to-list 'load-path "/usr/local/Cellar/erlang/17.4.1/lib/erlang/lib/tools-2.7.1/emacs")
-(add-to-list 'custom-theme-load-path "/Users/1001265/.emacs.d/elpa/color-theme-solarized-20150619.1734")
+(add-to-list 'load-path "/home/jaejin/.emacs.d/elpa/ggtags-20150325.2025")
+(add-to-list 'load-path "/usr/lib/erlang/lib/tools-2.8.2/emacs")
+(add-to-list 'custom-theme-load-path "/home/jaejin/.emacs.d/elpa/color-theme-solarized-20150619.1734")
 
 (setq exec-path (cons "/usr/local/bin" exec-path))
 (setq exec-path (cons "/opt/local/bin" exec-path))
@@ -33,10 +33,10 @@
 
 ;; erlang
 
-(add-to-list 'load-path "/Users/1001265/.emacs.d/distel/elisp")
+(add-to-list 'load-path "/home/jaejin/.emacs.d/distel/elisp")
 
-(setq erlang-man-root-dir "/usr/local/Cellar/erlang/17.4.1/lib/erlang")
-(setq exec-path (cons "/usr/local/Cellar/erlang/17.4.1/lib/erlang/bin" exec-path))
+(setq erlang-man-root-dir "/usr/lib/erlang/man")
+(setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
 (require 'erlang-start)
 (require 'erlang-eunit)
 (require 'erlang-flymake)
@@ -73,8 +73,8 @@
   (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
   (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
   (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
-(setenv "PATH" (concat (getenv "PATH") ":/Applications/ghc-7.8.4.app/Contents/bin"))
-(setq exec-path (append exec-path '("/Applications/ghc-7.8.4.app/Contents/bin")))
+
+
 
 ;; haskell
 
